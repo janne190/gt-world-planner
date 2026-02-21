@@ -1,0 +1,19 @@
+[package]
+name = "asset-builder"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "convert_textures"
+path = "src/convert_textures.rs"
+
+[[bin]]
+name = "build_blocks_json"
+path = "src/build_blocks_json.rs"
+
+[dependencies]
+rttex = { path = "../rttex" }
+gtitem-r = { path = "../gtitem-r", features = ["serde"] }
+image = "0.25"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

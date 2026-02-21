@@ -1,0 +1,48 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node.js
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Rust
+target/
+Cargo.lock
+**/*.rs.bk
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Growtopia Sprites (Large binary assets)
+growtopia-sprites/
+
+# Generated assets
+frontend/public/sprites/
+frontend/public/items.json
+frontend/public/blocks.json
+
+# Wasm build output
+mcp-server/pkg/
+
+# Growtopia Data Files
+items.dat
+*.dat

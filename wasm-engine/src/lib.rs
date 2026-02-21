@@ -78,6 +78,23 @@ impl WorldPlanner {
         }
     }
 
+    /// Fill a rectangle with the given bg_id (foreground unchanged).
+    #[wasm_bindgen]
+    pub fn fill_bg_rect(&mut self, x1: u32, y1: u32, x2: u32, y2: u32, bg_id: u16) {
+        let x_start = (x1 as usize).min(WORLD_WIDTH - 1);
+        let x_end = (x2 as usize).min(WORLD_WIDTH - 1);
+        let y_start = (y1 as usize).min(WORLD_HEIGHT - 1);
+        let y_end = (y2 as usize).min(WORLD_HEIGHT - 1);
+
+        for y in y_start..=y_end {
+            for x in x_start..=x_end {
+                if let Some(idx) = Self::index(x, y) {
+                    self.tiles[idx].bg_id = bg_id;
+                }
+            }
+        }
+    }
+
     /// Reset all tiles to empty (id 0).
     #[wasm_bindgen]
     pub fn clear_world(&mut self) {
