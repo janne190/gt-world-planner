@@ -1,5 +1,7 @@
 # Growtopia World Planner
 
+[![Growtopia World Planner Demo](https://img.youtube.com/vi/Au0LMJvMEsw/maxresdefault.jpg)](https://www.youtube.com/watch?v=Au0LMJvMEsw)
+
 A comprehensive toolset and web application for planning, visualizing, and manipulating Growtopia worlds.
 
 ## Project Structure
